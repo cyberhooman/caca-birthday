@@ -1,37 +1,37 @@
 const heartNotes = [
   {
-    title: "Soft strength",
+    title: "Doa 1",
+    prompt: "Menjadi istri yang sholehah—yang taat kepada Allah dan suaminya.",
+    letter: "Menjadi istri yang sholehah—yang taat kepada Allah dan suaminya."
+  },
+  {
+    title: "Doa 2",
     prompt:
-      "Kamu bisa bikin semua hal berat terasa ringan. Cara kamu sabar sama dunia bikin aku jatuh cinta setiap hari.",
-    letter: "Your quiet strength wraps our home in peace."
+      "Menjadi ibu yang baik—yang penuh kasih, sabar, dan bijaksana dalam mendidik anak-anak.",
+    letter:
+      "Menjadi ibu yang baik—yang penuh kasih, sabar, dan bijaksana dalam mendidik anak-anak."
   },
   {
-    title: "Laughter keeper",
+    title: "Doa 3",
+    prompt: "Memiliki rumah tangga yang sakinah, mawaddah, wa rahmah.",
+    letter: "Memiliki rumah tangga yang sakinah, mawaddah, wa rahmah."
+  },
+  {
+    title: "Doa 4",
+    prompt: "Dikelilingi keluarga yang sehat, bahagia, dan saling mendukung.",
+    letter: "Dikelilingi keluarga yang sehat, bahagia, dan saling mendukung."
+  },
+  {
+    title: "Doa 5",
+    prompt: "Diberi rezeki yang berkah, cukup, dan selalu membawa manfaat.",
+    letter: "Diberi rezeki yang berkah, cukup, dan selalu membawa manfaat."
+  },
+  {
+    title: "Doa 6",
     prompt:
-      "Tawa kamu itu kayak lagu favorit: selalu bikin suasana berubah hangat, bahkan di hari paling melelahkan.",
-    letter: "Your laughter fixes the cracks the day leaves behind."
-  },
-  {
-    title: "Brave heart",
-    prompt: "Kamu berani untuk tetap lembut. Itu keberanian paling keren yang pernah aku lihat.",
-    letter: "You prove that softness and courage can be the same thing."
-  },
-  {
-    title: "Home maker",
-    prompt: "Dimanapun kamu ada, di situ rasanya pulang. Kamu bikin ruang kosong jadi rumah.",
-    letter: "You build a sense of home just by breathing in the same room."
-  },
-  {
-    title: "Dream partner",
-    prompt:
-      "Kamu tidak cuma ngedukung mimpi-mimpi aku, tapi juga ngingetin aku buat menikmati perjalanan kecilnya.",
-    letter: "You dream with me, not just for me."
-  },
-  {
-    title: "Forever love note",
-    prompt:
-      "Terima kasih udah milih aku di antara milyaran kemungkinan. Aku tidak akan pernah berhenti milih kamu kembali.",
-    letter: "My forever begins again every time you smile at me."
+      "Tetap rendah hati dan istiqamah dalam kebaikan, di mana pun dan kapan pun.",
+    letter:
+      "Tetap rendah hati dan istiqamah dalam kebaikan, di mana pun dan kapan pun."
   }
 ];
 
