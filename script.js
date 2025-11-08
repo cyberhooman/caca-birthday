@@ -60,6 +60,34 @@ const state = {
   pointerTarget: { active: false, x: 0, y: 0 }
 };
 
+let heartAudioCtx = null;
+
+function playHeartSound() {
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) return;
+  try {
+    if (!heartAudioCtx) {
+      heartAudioCtx = new AudioContext();
+    }
+    if (heartAudioCtx.state === "suspended") {
+      heartAudioCtx.resume().catch(() => {});
+    }
+    const now = heartAudioCtx.currentTime;
+    const osc = heartAudioCtx.createOscillator();
+    const gain = heartAudioCtx.createGain();
+    osc.type = "triangle";
+    osc.frequency.setValueAtTime(480, now);
+    osc.frequency.exponentialRampToValueAtTime(720, now + 0.18);
+    gain.gain.setValueAtTime(0.22, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.32);
+    osc.connect(gain).connect(heartAudioCtx.destination);
+    osc.start(now);
+    osc.stop(now + 0.34);
+  } catch (error) {
+    console.warn("Heart sound unavailable", error);
+  }
+}
+
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
 function setupStarfield() {
@@ -306,6 +334,7 @@ function collectHeart(heart) {
   messageEl.innerHTML = `<strong>${heart.note.title}</strong>: ${heart.note.prompt}`;
   updateProgress();
   spawnSparkles(heart.x, heart.y);
+  playHeartSound();
 
   if (state.collected === heartNotes.length) {
     finishQuest();
