@@ -418,7 +418,6 @@ function init() {
       const parent = box.closest(".gift-item");
       if (parent) parent.classList.add("revealed");
       setTimeout(() => box.classList.remove("active"), 1200);
-      if (parent) setTimeout(() => parent.classList.remove("revealed"), 1200);
     });
   });
   closeGiftOverlay();
