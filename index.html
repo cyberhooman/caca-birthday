@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Quest for My Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="sky"></canvas>
+  <main class="game-shell">
+    <header class="hud">
+      <div class="hud-title">
+        <p class="intro">Mission log 11&middot;08</p>
+        <h1>Celestial Heartline</h1>
+        <p class="lede">A calm little interaction to map six reasons you are loved. Guide the firefly and take in every note.</p>
+      </div>
+      <div class="progress">
+        <span id="progressLabel">Hearts gathered: 0 / 6</span>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+      <div class="hud-message" id="message">
+        Use arrow keys/WASD on desktop, or tap + drag the night sky on your phone to guide the glowing firefly. Collect each heart to uncover another reason you are loved.
+      </div>
+    </header>
+
+    <section class="play-area" id="playArea">
+      <div class="player" id="player">
+        <span class="player-core"></span>
+      </div>
+      <button class="start-btn pulse" id="startBtn">Begin the Journey</button>
+    </section>
+
+    <section class="love-letter hidden" id="finalLetter">
+      <h2>For my dearest heart</h2>
+      <p id="letterBody">
+        Even after collecting all the reasons, there will always be more. Thank you for keeping our days honest, gentle, and full of wonder. Happy birthday, sayang. Semoga perjalanan kecil ini bikin kamu senyum dan merasa betapa kamu selalu dicintai.
+      </p>
+      <ul class="letter-list" id="letterList"></ul>
+      <button class="gift-btn hidden" id="giftBtn">Click me</button>
+      <button class="replay-btn" id="replayBtn">Fly the firefly again</button>
+    </section>
+  </main>
+
+  <section class="gift-overlay hidden" id="giftOverlay" aria-hidden="true">
+    <div class="gift-modal" role="dialog" aria-modal="true" aria-labelledby="giftTitle">
+      <button class="gift-close" id="giftClose" aria-label="Close surprise">&times;</button>
+      <p class="gift-eyebrow" id="giftTitle">Birthday payload</p>
+      <h3>Six little gifts for the brightest soul</h3>
+      <p class="gift-lede">Tap a box to see it glow. They are all filled with the softest wishes for you.</p>
+      <div class="gift-grid">
+        <div class="gift-item">
+          <div class="gift-box">
+            <span class="lid"></span>
+            <span class="ribbon ribbon-h"></span>
+            <span class="ribbon ribbon-v"></span>
+          </div>
+          <p class="gift-caption">Pandora gift ticket</p>
+        </div>
+        <div class="gift-item">
+          <div class="gift-box delay-1">
+            <span class="lid"></span>
+            <span class="ribbon ribbon-h"></span>
+            <span class="ribbon ribbon-v"></span>
+          </div>
+          <p class="gift-caption">Jalan jalan kuliner</p>
+        </div>
+        <div class="gift-item">
+          <div class="gift-box delay-2">
+            <span class="lid"></span>
+            <span class="ribbon ribbon-h"></span>
+            <span class="ribbon ribbon-v"></span>
+          </div>
+          <p class="gift-caption">Kiss penuh cinta &#10084;&#65039;</p>
+        </div>
+      </div>
+      <p class="gift-note">Every box is a promise: calm mornings, loud laughter, slow dancing in the kitchen, teamwork, safe hugs, and endless choosing of you.</p>
+    </div>
+  </section>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
